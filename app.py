@@ -7,3 +7,13 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = "secret"
 
 debug = DebugToolbarExtension(app)
+
+@app.get('/questions')
+def questions():
+    print(silly_story)
+
+    html = render_template("questions.html", prompts = silly_story.prompts)
+
+    return html
+
+
