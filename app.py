@@ -22,7 +22,7 @@ def story_result():
 
     prompts = request.args
     # breakpoint()
-    result = silly_story.get_result_text( prompts)
+    result = silly_story.get_result_text(prompts)
 
-    return render_template("results.html", story = result)
+    return render_template("results.html", story=result)
 
